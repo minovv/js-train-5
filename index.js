@@ -2,9 +2,10 @@
 function printIndexes(array) {
 	// Проходимося по всіх індексах масиву
 	// Виводимо кожен індекс (id) на консоль
-	for (const id in array) {
+	for (let id in array) {
 		console.log(id);
 	}
+	return array;
 }
 
 console.log("Завдання 1 ====================================");
@@ -56,7 +57,9 @@ function modifyArray(array) {
 	delete array[2];
 	// Виводимо масив перетворений в рядок
 	console.log(array.toString());
+	return array;
 }
+
 
 console.log("Завдання 4 ====================================");
 modifyArray([1, "two", 3, "four", 5]); // Виведе 1,two,,four,5
@@ -66,9 +69,10 @@ function printUppercase(array) {
 	// Проходимося по всіх елементах масиву
 	// Перетворюємо кожен елемент в верхній регістр та виводимо на консоль
 
-	for (const arrayItem of array) {
+	for (let arrayItem of array) {
 		console.log(arrayItem.toUpperCase());
 	}
+	return array;
 }
 
 console.log("Завдання 5 ====================================");
@@ -98,8 +102,7 @@ function findMinMax([firstElement, ...restElements]) {
 			max = element;
 		}
 	}
-
-	console.log(`Min: ${min} Max: ${max}`);
+	return console.log(`Min: ${min} Max: ${max}`);
 }
 
 console.log("Завдання 6 ====================================");
@@ -110,6 +113,7 @@ findMinMax([5, 2, 8, 1, 9, 3]); // Виведе Min: 1 Max: 9
 function printStrings(array) {
 	// Перетворюємо масив в рядок і видаляемо пробіли та виводимо його на консоль
 	console.log(array.toString().repeat(2));
+	return array;
 }
 
 console.log("Завдання 7 ====================================");
@@ -124,7 +128,7 @@ function concatenateStrings(array, subString) {
 	// Виводимо результат
 
 	(array.toString());
-	console.log(array.includes(subString));
+	return console.log(array.includes(subString));
 
 }
 
@@ -144,8 +148,7 @@ function addTenToEach(array) {
 	for (let n in array) {
 		list[n] = array[n] + 10;
 	}
-
-	console.log(list);
+	return console.log(list);
 }
 
 console.log("Завдання 9 ====================================");
